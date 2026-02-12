@@ -54,9 +54,7 @@ const App: React.FC = () => {
           )}
           
           {view === 'tool' && (
-            <div className="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-               <PasswordStrengthTool />
-            </div>
+             <PasswordStrengthTool />
           )}
 
           {view === 'privacy' && (
