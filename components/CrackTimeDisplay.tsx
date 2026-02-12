@@ -50,7 +50,7 @@ export const CrackTimeDisplay: React.FC<CrackTimeDisplayProps> = ({ times, entro
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 h-full">
       {/* Entropy Card */}
-      <div className="bg-gray-50/50 dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/5 flex flex-col justify-between">
+      <div className="bg-white/40 dark:bg-gray-900/40 backdrop-blur-lg rounded-2xl p-6 border border-white/50 dark:border-white/10 flex flex-col justify-between shadow-soft-sm hover:bg-white/50 dark:hover:bg-gray-900/50 transition-colors">
          <div className="flex items-center gap-2 mb-2 text-purple-600 dark:text-purple-400">
              <Activity size={20} />
              <span className="text-xs font-bold uppercase tracking-wider">Entropy</span>
@@ -65,7 +65,7 @@ export const CrackTimeDisplay: React.FC<CrackTimeDisplayProps> = ({ times, entro
       </div>
 
       {/* Crack Time Card - Botnet (Worst Case) */}
-      <div className="bg-gray-50/50 dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/5 flex flex-col justify-between">
+      <div className="bg-white/40 dark:bg-gray-900/40 backdrop-blur-lg rounded-2xl p-6 border border-white/50 dark:border-white/10 flex flex-col justify-between shadow-soft-sm hover:bg-white/50 dark:hover:bg-gray-900/50 transition-colors">
          <div className="flex items-center gap-2 mb-2 text-orange-600 dark:text-orange-400">
              <Globe size={20} />
              <span className="text-xs font-bold uppercase tracking-wider">Time to Crack</span>
@@ -83,7 +83,7 @@ export const CrackTimeDisplay: React.FC<CrackTimeDisplayProps> = ({ times, entro
 
       {/* Secondary Times (Smaller) - Stacked Below */}
       <div className="md:col-span-2 grid grid-cols-2 gap-4">
-          <div className="bg-white/40 dark:bg-white/5 rounded-xl p-4 border border-gray-100/50 dark:border-white/5 flex items-center justify-between">
+          <div className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl p-4 border border-white/40 dark:border-white/10 flex items-center justify-between shadow-soft-xs hover:bg-white/40 dark:hover:bg-gray-900/40 transition-colors">
                <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs font-medium">
                    <Zap size={14} /> GPU Cluster
                </div>
@@ -91,7 +91,7 @@ export const CrackTimeDisplay: React.FC<CrackTimeDisplayProps> = ({ times, entro
                    {times.gpu}
                </span>
           </div>
-          <div className="bg-white/40 dark:bg-white/5 rounded-xl p-4 border border-gray-100/50 dark:border-white/5 flex items-center justify-between">
+          <div className="bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-xl p-4 border border-white/40 dark:border-white/10 flex items-center justify-between shadow-soft-xs hover:bg-white/40 dark:hover:bg-gray-900/40 transition-colors">
                <div className="flex items-center gap-2 text-gray-500 dark:text-gray-400 text-xs font-medium">
                    <Shield size={14} /> Basic Attack
                </div>

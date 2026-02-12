@@ -118,9 +118,10 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode, onNavi
               {/* Desktop CTA */}
               <button 
                 onClick={() => onNavigate('tool')}
-                className="hidden md:flex px-5 py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-full text-sm font-semibold hover:scale-105 active:scale-95 transition-all shadow-soft-md"
+                className="group hidden md:flex items-center gap-2 px-6 py-2.5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-full text-sm font-medium shadow-md hover:shadow-lg dark:shadow-[0_0_20px_rgba(124,58,237,0.4)] transform hover:scale-105 active:scale-95 transition-all duration-300"
               >
                 Check Now
+                <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
               {/* Mobile Menu Button - ONLY Visible on Mobile */}
@@ -210,7 +211,7 @@ export const Header: React.FC<HeaderProps> = ({ darkMode, toggleDarkMode, onNavi
           {/* CTA Button */}
           <button 
             onClick={() => handleNavigation('tool')}
-            className="w-full py-3.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform mt-2"
+            className="w-full py-3.5 bg-gradient-to-r from-violet-600 to-indigo-600 text-white rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg shadow-violet-500/20 active:scale-95 transition-all mt-2"
           >
             Try Now <ArrowRight size={16} />
           </button>

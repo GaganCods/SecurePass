@@ -129,7 +129,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
               </button>
               <button 
                 onClick={() => scrollToSection('learn')}
-                className="w-full sm:w-auto px-9 py-5 bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-200 rounded-full font-semibold text-lg hover:bg-gray-50/50 dark:hover:bg-white/10 hover:scale-105 transition-all duration-300 flex items-center justify-center cursor-pointer backdrop-blur-sm"
+                className="w-full sm:w-auto px-9 py-5 bg-white/50 dark:bg-white/5 border border-gray-200 dark:border-white/10 text-gray-700 dark:text-gray-200 rounded-full font-semibold text-lg hover:bg-white/60 dark:hover:bg-white/10 hover:scale-105 transition-all duration-300 flex items-center justify-center cursor-pointer backdrop-blur-md"
               >
                 How It Works
               </button>
@@ -168,7 +168,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                         <div className={`w-3 h-3 rounded-full transition-colors duration-500 ${colorKey === 'amber' ? 'bg-amber-500' : 'bg-gray-200 dark:bg-gray-700'}`}></div>
                         <div className={`w-3 h-3 rounded-full transition-colors duration-500 ${colorKey === 'emerald' ? 'bg-emerald-500' : 'bg-gray-200 dark:bg-gray-700'}`}></div>
                      </div>
-                     <div className={`flex items-center gap-2 px-3 py-1 rounded-full transition-colors duration-500 backdrop-blur-sm ${isAnimating ? 'bg-blue-100/80 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' : 'bg-gray-100/80 dark:bg-white/5 text-gray-500'}`}>
+                     <div className={`flex items-center gap-2 px-3 py-1 rounded-full transition-colors duration-500 backdrop-blur-md ${isAnimating ? 'bg-blue-100/80 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' : 'bg-gray-100/80 dark:bg-white/5 text-gray-500'}`}>
                         {isAnimating ? <Zap size={12} className="animate-pulse" /> : <Lock size={12} />}
                         <span className="text-[10px] font-bold uppercase tracking-wider">{isAnimating ? 'Live Demo' : 'Secure Check'}</span>
                      </div>
@@ -230,7 +230,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   {/* 3 & 4. Stats Row */}
                   <div className="relative z-10 grid grid-cols-2 gap-4">
                         {/* Crack Time */}
-                        <div className="p-4 rounded-2xl bg-gray-50/50 dark:bg-white/5 border border-gray-100/50 dark:border-white/5 transition-all duration-300 group-hover:bg-white/60 dark:group-hover:bg-white/10 backdrop-blur-sm">
+                        <div className="p-4 rounded-2xl bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 transition-all duration-300 group-hover:bg-white/60 dark:group-hover:bg-white/10 backdrop-blur-md">
                            <div className="flex items-center gap-2 mb-2 text-gray-400">
                                 <Clock size={14} />
                                 <span className="text-[10px] font-bold uppercase tracking-wider">Crack Time</span>
@@ -241,7 +241,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                         </div>
 
                         {/* Entropy */}
-                        <div className="p-4 rounded-2xl bg-gray-50/50 dark:bg-white/5 border border-gray-100/50 dark:border-white/5 transition-all duration-300 group-hover:bg-white/60 dark:group-hover:bg-white/10 backdrop-blur-sm">
+                        <div className="p-4 rounded-2xl bg-white/40 dark:bg-white/5 border border-white/50 dark:border-white/10 transition-all duration-300 group-hover:bg-white/60 dark:group-hover:bg-white/10 backdrop-blur-md">
                            <div className="flex items-center gap-2 mb-2 text-gray-400">
                                 <Activity size={14} />
                                 <span className="text-[10px] font-bold uppercase tracking-wider">Entropy</span>
@@ -255,7 +255,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                
                {/* Floating Success Badge - Only for Strong/Very Strong */}
                <div className={`
-                    absolute -right-6 top-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md p-3 pr-5 rounded-2xl shadow-soft-xl animate-float border border-gray-100 dark:border-white/5 flex items-center gap-3 transition-all duration-500
+                    absolute -right-6 top-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-xl p-3 pr-5 rounded-2xl shadow-soft-xl animate-float border border-gray-100 dark:border-white/5 flex items-center gap-3 transition-all duration-500
                     ${result.score >= 60 && password ? 'opacity-100 translate-y-0 rotate-0' : 'opacity-0 translate-y-4 -rotate-12 pointer-events-none'}
                `}>
                     <div className="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">

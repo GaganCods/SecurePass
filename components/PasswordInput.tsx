@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Eye, EyeOff, Copy, Check, Trash2, Undo2, Redo2 } from 'lucide-react';
 import { StrengthResult } from '../types';
@@ -59,7 +58,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
   return (
     <div className="w-full">
       <div 
-        className="relative transition-all duration-500 rounded-2xl bg-gray-50 dark:bg-black/20 group"
+        className="relative transition-all duration-500 rounded-2xl bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl group border border-white/50 dark:border-white/10"
         style={{
             boxShadow: value ? `0 0 30px ${getGlowColor()}` : 'none'
         }}
@@ -78,7 +77,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
         <div className="absolute right-4 top-1/2 -translate-y-1/2">
             <button
                 onClick={() => setShowPassword(!showPassword)}
-                className="p-2 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
+                className="p-2 text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors rounded-lg hover:bg-white/50 dark:hover:bg-white/10"
                 title={showPassword ? "Hide password" : "Show password"}
             >
                 {showPassword ? <EyeOff size={22} /> : <Eye size={22} />}
@@ -92,12 +91,12 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
           {/* History Controls */}
           <div className="flex items-center gap-2">
             {(onUndo || onRedo) && (
-                <div className="flex items-center bg-gray-100/50 dark:bg-white/5 rounded-xl p-1 border border-gray-200/50 dark:border-white/5">
+                <div className="flex items-center bg-white/30 dark:bg-white/5 rounded-xl p-1 border border-white/40 dark:border-white/5 backdrop-blur-md">
                     {onUndo && (
                         <button
                             onClick={onUndo}
                             disabled={!canUndo}
-                            className={`p-2 rounded-lg transition-all duration-200 ${canUndo ? 'text-gray-600 dark:text-gray-300 hover:bg-white dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white shadow-sm' : 'text-gray-300 dark:text-gray-700 cursor-not-allowed'}`}
+                            className={`p-2 rounded-lg transition-all duration-200 ${canUndo ? 'text-gray-600 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white shadow-sm' : 'text-gray-300 dark:text-gray-700 cursor-not-allowed'}`}
                             title="Undo"
                         >
                             <Undo2 size={18} />
@@ -108,7 +107,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
                         <button
                             onClick={onRedo}
                             disabled={!canRedo}
-                            className={`p-2 rounded-lg transition-all duration-200 ${canRedo ? 'text-gray-600 dark:text-gray-300 hover:bg-white dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white shadow-sm' : 'text-gray-300 dark:text-gray-700 cursor-not-allowed'}`}
+                            className={`p-2 rounded-lg transition-all duration-200 ${canRedo ? 'text-gray-600 dark:text-gray-300 hover:bg-white/50 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white shadow-sm' : 'text-gray-300 dark:text-gray-700 cursor-not-allowed'}`}
                             title="Redo"
                         >
                             <Redo2 size={18} />
@@ -123,7 +122,7 @@ export const PasswordInput: React.FC<PasswordInputProps> = ({
              {value && (
                 <button
                   onClick={handleClear}
-                  className="group flex items-center gap-2 px-3 py-2 text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20"
+                  className="group flex items-center gap-2 px-3 py-2 text-gray-500 hover:text-red-500 dark:text-gray-400 dark:hover:text-red-400 transition-colors rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 backdrop-blur-sm"
                   title="Clear password"
                 >
                   <Trash2 size={18} />

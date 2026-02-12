@@ -32,7 +32,14 @@ export const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="relative py-24 bg-gray-50/50 dark:bg-black/20 border-t border-gray-200 dark:border-white/5 scroll-mt-20 overflow-hidden">
+    <section id="faq" className="relative py-24 scroll-mt-20 overflow-hidden">
+      
+      {/* Top Gradient Background (Fade In) */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none bg-gradient-to-b from-transparent via-gray-50/80 to-gray-50/80 dark:from-transparent dark:via-black/20 dark:to-black/20"
+        aria-hidden="true"
+      />
+
       {/* Gradient Overlay for seamless transition to footer */}
       <div 
         className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-b from-transparent to-[var(--footer-base)] pointer-events-none z-0" 

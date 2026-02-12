@@ -16,7 +16,7 @@ export const RequirementChecklist: React.FC<RequirementChecklistProps> = ({ resu
   ];
 
   return (
-    <div className="bg-gray-50/50 dark:bg-white/5 rounded-2xl p-6 border border-gray-100 dark:border-white/5 h-full">
+    <div className="bg-white/40 dark:bg-gray-900/40 backdrop-blur-lg rounded-2xl p-6 border border-white/50 dark:border-white/10 h-full shadow-soft-sm hover:bg-white/50 dark:hover:bg-gray-900/50 transition-colors">
       <h3 className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
         Requirements
       </h3>

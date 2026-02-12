@@ -3,7 +3,13 @@ import { Maximize, Shuffle, Layers, ArrowRight, X, Check } from 'lucide-react';
 
 export const EducationalSection: React.FC = () => {
   return (
-    <section id="learn" className="py-24 bg-gray-50/50 dark:bg-black/20 border-y border-gray-100 dark:border-white/5 scroll-mt-20">
+    <section id="learn" className="py-24 relative scroll-mt-20">
+      {/* Background with Soft Fade In/Out */}
+      <div 
+        className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-b from-transparent via-gray-50/80 to-transparent dark:from-transparent dark:via-black/20 dark:to-transparent"
+        aria-hidden="true"
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -20,7 +26,7 @@ export const EducationalSection: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
             
             {/* Card 1: Length */}
-            <div className="group bg-white/60 dark:bg-gray-900/50 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+            <div className="group bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:bg-blue-500/10 transition-colors" />
                 
                 {/* Visual Idea: Exponential Bars */}
@@ -42,7 +48,7 @@ export const EducationalSection: React.FC = () => {
             </div>
 
             {/* Card 2: Entropy */}
-            <div className="group bg-white/60 dark:bg-gray-900/50 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+            <div className="group bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:bg-purple-500/10 transition-colors" />
 
                 {/* Visual Idea: Random vs Predictable */}
@@ -69,7 +75,7 @@ export const EducationalSection: React.FC = () => {
             </div>
 
             {/* Card 3: Variety */}
-            <div className="group bg-white/60 dark:bg-gray-900/50 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
+            <div className="group bg-white/40 dark:bg-gray-900/40 backdrop-blur-xl border border-white/50 dark:border-white/10 rounded-[32px] p-8 shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-amber-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none group-hover:bg-amber-500/10 transition-colors" />
 
                 {/* Visual Idea: Pool Size Counter */}

@@ -3,8 +3,14 @@ import { ShieldCheck } from 'lucide-react';
 
 export const PrivacySection: React.FC = () => {
   return (
-    <section className="py-24 relative overflow-hidden bg-transparent">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section className="py-24 relative overflow-hidden">
+      {/* Background with Soft Fade In/Out */}
+      <div 
+        className="absolute inset-0 -z-10 pointer-events-none bg-gradient-to-b from-transparent via-gray-50/80 to-transparent dark:from-transparent dark:via-black/20 dark:to-transparent"
+        aria-hidden="true"
+      />
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         
         <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-2xl text-green-600 dark:text-green-400 mb-8">
             <ShieldCheck size={32} />

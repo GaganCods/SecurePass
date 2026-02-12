@@ -69,7 +69,7 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onGenerate
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
-      <div className="bg-white dark:bg-[#161b28] rounded-[24px] shadow-2xl max-w-lg w-full border border-gray-200 dark:border-white/10 overflow-hidden transform scale-100 transition-all flex flex-col max-h-[90vh]">
+      <div className="bg-white/90 dark:bg-[#161b28]/90 backdrop-blur-xl rounded-[24px] shadow-2xl max-w-lg w-full border border-gray-200 dark:border-white/10 overflow-hidden transform scale-100 transition-all flex flex-col max-h-[90vh]">
         
         {/* Header */}
         <div className="flex justify-between items-center p-6 pb-4 border-b border-gray-100 dark:border-white/5 bg-white/50 dark:bg-white/5 backdrop-blur-md">
@@ -85,7 +85,7 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onGenerate
         <div className="overflow-y-auto flex-1 p-6 space-y-6">
             
             {/* Live Preview Section */}
-            <div className="bg-gray-50 dark:bg-black/20 rounded-2xl p-6 border border-gray-100 dark:border-white/5 relative group">
+            <div className="bg-white/40 dark:bg-black/40 backdrop-blur-lg rounded-2xl p-6 border border-gray-100 dark:border-white/5 relative group">
                 <div className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2 flex justify-between">
                     <span>Preview</span>
                     <span className={`${STRENGTH_COLORS[previewStrength.strength].replace('bg-', 'text-')} transition-colors`}>
@@ -123,7 +123,7 @@ export const PasswordGenerator: React.FC<PasswordGeneratorProps> = ({ onGenerate
             </div>
 
             {/* Mode Switcher Tabs */}
-            <div className="flex bg-gray-100 dark:bg-white/5 p-1 rounded-xl">
+            <div className="flex bg-gray-100/50 dark:bg-white/5 p-1 rounded-xl backdrop-blur-md">
                 {(['random', 'memorable', 'passphrase'] as GeneratorMode[]).map((m) => (
                     <button
                         key={m}
