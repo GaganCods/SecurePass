@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Strength Checker</title>
+    <meta name="description" content="Free password strength checker with real-time crack time estimation. Test your password security locally.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'],
+            },
+            colors: {
+              brand: '#00659F', // Requested Brand Color
+              background: {
+                light: '#f8fafc', // Updated to match minimal setup
+                dark: '#020617', // Deep blue-black
+              },
+              card: {
+                light: '#ffffff',
+                dark: '#161b28', // Slightly lighter than bg
+              },
+              primary: {
+                start: '#7c3aed', // Purple
+                end: '#6366f1',   // Blue/Indigo
+              },
+              strength: {
+                veryWeak: '#ef4444',
+                weak: '#f97316',
+                medium: '#eab308',
+                strong: '#84cc16',
+                veryStrong: '#22c55e',
+              }
+            },
+            boxShadow: {
+              'soft-xs': '0 2px 4px rgba(0,0,0,0.02)',
+              'soft-sm': '0 4px 8px rgba(0,0,0,0.04)',
+              'soft-md': '0 8px 16px rgba(0,0,0,0.06)',
+              'soft-lg': '0 16px 32px rgba(0,0,0,0.08)',
+              'soft-xl': '0 24px 48px rgba(0,0,0,0.12)',
+              'glow-blue': '0 0 20px rgba(99, 102, 241, 0.5)',
+              'glow-purple': '0 0 20px rgba(124, 58, 237, 0.5)',
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'float-slow': 'float 12s ease-in-out infinite',
+              'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      :root {
+        /* Global Background Strategy */
+        --bg-main: #f8fafc;
+        
+        /* Nebula Colors - Light */
+        --nebula-1: rgba(139, 92, 246, 0.08); /* Violet */
+        --nebula-2: rgba(59, 130, 246, 0.08); /* Blue */
+        --nebula-3: rgba(236, 72, 153, 0.05); /* Pink */
+        
+        /* Grid Color - Light */
+        --grid-color: rgba(15, 23, 42, 0.1); /* Increased visibility from 0.07 to 0.1 */
+
+        /* Footer Variables - Light */
+        --footer-base: #f8fafc;
+        --footer-radial-start: #ffffff;
+        --footer-radial-end: #7c3aed;
+        
+        /* CTA Section Variables - Light */
+        --cta-bg-base: #ffffff;
+        --cta-radial-start: #f0f9ff;
+        --cta-radial-end: #00659F;
+        --cta-grid: rgba(0, 101, 159, 0.1);
+      }
+
+      .dark {
+        /* Global Background Strategy */
+        --bg-main: #020617; /* Deep Navy/Black */
+
+        /* Nebula Colors - Dark */
+        --nebula-1: rgba(124, 58, 237, 0.12); /* Violet */
+        --nebula-2: rgba(59, 130, 246, 0.10); /* Blue */
+        --nebula-3: rgba(20, 184, 166, 0.08); /* Teal */
+
+        /* Grid Color - Dark */
+        --grid-color: rgba(255, 255, 255, 0.1); /* Increased visibility from 0.08 to 0.1 */
+
+        /* Footer Variables - Dark */
+        --footer-base: #020617;
+        --footer-radial-start: #020617;
+        --footer-radial-end: #1e1b4b;
+
+        /* CTA Section Variables - Dark */
+        --cta-bg-base: #000000;
+        --cta-radial-start: #000000;
+        --cta-radial-end: #00659F;
+        --cta-grid: rgba(0, 101, 159, 0.2);
+      }
+
+      /* Global Body Style */
+      body {
+        background: var(--bg-main);
+        transition: background 0.4s ease;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="text-gray-900 dark:text-gray-100 antialiased selection:bg-indigo-500 selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
